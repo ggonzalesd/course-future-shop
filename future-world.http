@@ -1,0 +1,31 @@
+@host=http://localhost:3000
+@shoppify=
+
+### Ivalidate tag
+POST {{host}}/api/cache/tag
+
+### Invalidate Path
+POST {{host}}/api/cache/path
+
+### Get Products
+GET {{shoppify}}/admin/api/2023-07/products.json
+Authorization: 
+
+
+### TOKEN TAG
+POST {{host}}/api/cache/tag
+Content-Type: application/json
+
+{
+  "tag": "main-products",
+  "token": "897F3CA13B2AEE475E21827D9DA78"
+}
+
+### TOKEN PatH
+POST {{host}}/api/cache/path
+Content-Type: application/json
+
+{
+  "path": "/",
+  "token": "897F3CA13B2AEE475E21827D9DA78"
+}
