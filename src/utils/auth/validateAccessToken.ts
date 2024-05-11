@@ -9,7 +9,7 @@ export const validateAccessToken = async () => {
 
   if (!accessToken) return { customer: null };
 
-  console.log(accessToken);
+  console.log(`Valor de token: ${accessToken}`);
 
   const data = await graphqlClient.request(customerName, {
     customerAccessToken: accessToken,

@@ -10,7 +10,7 @@ export default async function Layout({
   children: React.ReactNode;
 }) {
   const collections = await getCollections();
-  console.log(collections);
+  // console.log(collections);
 
   return (
     <main className={style.StoreLayout}>
