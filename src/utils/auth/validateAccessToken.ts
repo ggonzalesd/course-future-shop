@@ -7,6 +7,8 @@ export const validateAccessToken = async () => {
   const accessToken = cookiesStore.get("accessToken")?.value;
   const graphqlClient = GraphQLClientSingleton.getInstance().getClient();
 
+  if (!accessToken) return { customer: null };
+
   console.log(accessToken);
 
   const data = await graphqlClient.request(customerName, {
